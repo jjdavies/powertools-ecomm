@@ -1,0 +1,71 @@
+$font-stack: Myriad Variable Concept, sans-serif;
+$background-color: #fcfcfc;
+$primary-color: #e03e37;
+$secondary-color: #fea411;
+$tertiary-color: #5ccce6;
+
+.main {
+  background-color: $background-color;
+  min-height: 100vh;
+}
+
+.salesBanner {
+  background-color: $secondary-color;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-family: $font-stack;
+}
+
+.mainBanner {
+  display: flex;
+  align-items: center;
+  background-color: $primary-color;
+  margin: 1vw 0 0 0;
+  height: 8vh;
+}
+
+.mainLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120%;
+  aspect-ratio: 1/2;
+}
+
+.mainLogo {
+  display: flex;
+  object-fit: contain;
+  height: 100%;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+  z-index: 10;
+}
+
+.bannerCategories {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: clamp(01rem, 1.5vw, 1.5rem);
+  cursor: pointer;
+  height: 100%;
+  padding: auto 0;
+}
+
+.bannerDropDownMenus {
+  margin: 0 1vw;
+}
+
+.bannerDropDown {
+  position: relative;
+  background-color: #e03e37;
+  height: 50vh;
+  width: 60%;
+}
