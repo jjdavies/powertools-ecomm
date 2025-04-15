@@ -15,6 +15,7 @@ export default function Home() {
   ];
 
   const [hoverCategory, setHoverCategory] = useState<string>(""); // State to track which category is being hovered over
+  const [hamburgerClicked, setHamburgerClicked] = useState(true); // State to track if the hamburger menu is clicked
 
   const mouseEnter = (e) => {
     setHoverCategory(e.target.innerText);
@@ -27,20 +28,24 @@ export default function Home() {
     // }
   };
 
+  const hamburgerClick = () => {
+    setHamburgerClicked(!hamburgerClicked);
+  };
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.salesBanner}>!!SALE!!</div>
         <div className={styles.mainBanner}>
-          <div className={styles.mainLogoContainer}>
-            <Image
-              className={styles.mainLogo}
-              src={MainLogo}
-              width={0}
-              height={0}
-              alt="company logo"
-            />
-          </div>
+          {/* <div className={styles.mainLogoContainer}> */}
+          <Image
+            className={styles.mainLogo}
+            src={MainLogo}
+            width={0}
+            height={0}
+            alt="company logo"
+          />
+          {/* </div> */}
           <div className={styles.bannerCategories}>
             {bannerCategories.map((category) => (
               <div
@@ -52,6 +57,28 @@ export default function Home() {
                 {category.name}
               </div>
             ))}
+          </div>
+          <div
+            className={styles.hamburgerMenuContainer}
+            onClick={hamburgerClick}
+          >
+            <div
+              className={styles.hamburgerMenu}
+              style={{ flexDirection: hamburgerClicked ? "row" : "column" }}
+            >
+              <div
+                className={styles.hamburgerLine}
+                style={{ transform: `rotate(${hamburgerClicked ? 90 : 0}deg)` }}
+              ></div>
+              <div
+                className={styles.hamburgerLine}
+                style={{ transform: `rotate(${hamburgerClicked ? 90 : 0}deg)` }}
+              ></div>
+              <div
+                className={styles.hamburgerLine}
+                style={{ transform: `rotate(${hamburgerClicked ? 90 : 0}deg)` }}
+              ></div>
+            </div>
           </div>
         </div>
         <div className={styles.bannerDropDownMenus}>

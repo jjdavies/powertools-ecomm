@@ -17,6 +17,7 @@
   background-color: #e03e37;
   margin: 1vw 0 0 0;
   height: 8vh;
+  justify-content: space-between;
 }
 
 .mainLogoContainer {
@@ -31,8 +32,15 @@
   display: flex;
   object-fit: contain;
   height: 100%;
+  width: auto;
+  margin: 0 5px;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
   z-index: 10;
+}
+@media (max-width: 425px) {
+  .mainLogo {
+    align-self: flex-start;
+  }
 }
 
 .bannerCategories {
@@ -41,6 +49,11 @@
   align-items: center;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 768px) {
+  .bannerCategories {
+    display: none;
+  }
 }
 
 .category {
@@ -62,6 +75,49 @@
   background-color: #e03e37;
   height: 50vh;
   width: 60%;
+}
+
+.hamburgerMenu {
+  display: none;
+  cursor: pointer;
+  margin: 0 1vw;
+  width: 20px;
+  height: auto;
+  padding: auto 0;
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    cursor: pointer;
+    height: 100%;
+    padding: auto 10px;
+    margin: 5px;
+  }
+}
+
+.hamburgerMenuContainer {
+  border: 1px solid white;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+.hamburgerLine {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin: 3px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburgerClicked {
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=output.module.css.map */
