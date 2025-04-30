@@ -1,6 +1,24 @@
+.page {
+  background: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main {
   background-color: #fcfcfc;
   min-height: 100vh;
+  width: 80vw;
+}
+@media (max-width: 425px) {
+  .main {
+    width: 100vw;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    width: 100vw;
+  }
 }
 
 .salesBanner {
@@ -9,15 +27,17 @@
   padding: 10px;
   text-align: center;
   font-family: Myriad Variable Concept, sans-serif;
+  width: 100vw;
 }
 
 .mainBanner {
   display: flex;
   align-items: center;
   background-color: #e03e37;
-  margin: 1vw 0 0 0;
+  margin: 0vw 0 0 0;
   height: 8vh;
   justify-content: space-between;
+  width: 100vw;
 }
 
 .mainLogoContainer {
@@ -75,6 +95,44 @@
   background-color: #e03e37;
   height: 50vh;
   width: 60%;
+}
+
+.productsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 3px;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 2px;
+  align-items: center;
+  max-width: 220px;
+  text-align: center;
+}
+
+.productName {
+  font-weight: bold;
+  text-wrap: balance;
+}
+
+.productAddToCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid #e03e37;
+}
+
+.productAddToCart:hover {
+  background-color: #e03e37;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburgerMenu {

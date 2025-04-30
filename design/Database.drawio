@@ -1,0 +1,58 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.15 Chrome/134.0.6998.205 Electron/35.2.1 Safari/537.36" version="26.2.15">
+  <diagram name="Page-1" id="gXFInA25bk-7lN6BzP8W">
+    <mxGraphModel dx="946" dy="662" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-1" value="&lt;b&gt;Tables&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3tBdfCPUsTRCMFYGYewe-2" target="3tBdfCPUsTRCMFYGYewe-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-2" value="products" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3tBdfCPUsTRCMFYGYewe-3" target="3tBdfCPUsTRCMFYGYewe-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-3" value="product_categories" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3tBdfCPUsTRCMFYGYewe-4" target="3tBdfCPUsTRCMFYGYewe-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-4" value="orders" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="142" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3tBdfCPUsTRCMFYGYewe-5" target="3tBdfCPUsTRCMFYGYewe-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-5" value="order_details" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="180" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3tBdfCPUsTRCMFYGYewe-6" target="3tBdfCPUsTRCMFYGYewe-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-6" value="customers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-7" value="id, forenames, surname, city" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="220" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-9" value="id, name, category_id, price, imageid" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="60" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-15" value="id, name, description" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="100" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-17" value="id, customer_id, order_details_id" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="142" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3tBdfCPUsTRCMFYGYewe-19" value="id, product_list, total_price, status" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="180" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
