@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 interface ProductCardProps {
   product: {
     product_name: string;
@@ -14,6 +15,7 @@ import Image from "next/image";
 
 export default function ProductCard(props: ProductCardProps) {
   const { product } = props;
+  const router = useRouter();
 
   const addToCart = (productId: number) => {
     console.log(productId);
@@ -22,10 +24,15 @@ export default function ProductCard(props: ProductCardProps) {
       // proceed as guest
       const cart = localStorage.getItem("cart");
 
-      if (cart)
-        return localStorage.setItem("cart", [cart, productId].toString());
+      if (cart) {
+        localStorage.setItem("cart", [cart, productId].toString());
+        return router.push("#cart");
+      }
       localStorage.setItem("cart", [productId].toString());
+      router.push("/cart");
+      return;
     }
+    // proceed as logged in user
   };
 
   return (

@@ -99,6 +99,7 @@ $tertiary-color: #5ccce6;
 
 .category {
   display: flex;
+  flex-direction: row;
   align-items: center;
   color: white;
   font-size: clamp(01rem, 1.5vw, 1.5rem);
@@ -181,7 +182,7 @@ $tertiary-color: #5ccce6;
   }
 }
 .hamburgerMenuContainer {
-  border: 1px solid white;
+  // border: 1px solid white;
   margin: 0 10px;
   border-radius: 5px;
 }
@@ -196,4 +197,29 @@ $tertiary-color: #5ccce6;
 .hamburgerClicked {
   transform: rotate(90deg);
   transition: all 0.3s ease-in-out;
+}
+
+.cartIcon {
+  margin: 0 5px;
+}
+
+.cartBadgeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 5px;
+}
+
+.cartBadge {
+  position: relative;
+  top: -10px;
+  right: 10px;
+  background: whitesmoke;
+  width: 20px;
+  height: 20px;
+  size: 10px;
+  color: black;
+  text-align: center;
+  border-radius: 50%;
 }
