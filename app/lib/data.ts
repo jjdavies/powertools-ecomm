@@ -1,4 +1,5 @@
 import postgres from "postgres";
+import Product from "../interface/Product";
 
 const sql = postgres({
   host: "localhost",
@@ -8,10 +9,10 @@ const sql = postgres({
   password: "admin",
 });
 
-export async function getProducts() {
+export async function getProducts(): Promise<Product[]> {
   try {
-    const products = await sql`SELECT * FROM products`;
-    return products;
+    const products = await sql<Product[]>`SELECT * FROM products`;
+    return products as Product[]; // Type assertion to Product[]
   } catch (error) {
     console.error("Error fetching products:", error);
     return [];

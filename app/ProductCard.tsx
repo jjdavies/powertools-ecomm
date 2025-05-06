@@ -1,16 +1,12 @@
 "use client";
 import { useRouter } from "next/navigation";
 interface ProductCardProps {
-  product: {
-    product_name: string;
-    category_id: number;
-    product_id: number;
-    price: number;
-    image_id: string;
-  };
+  product: Product;
+  addedToCart: () => void;
 }
 import styles from "./output.module.css";
 import Image from "next/image";
+import Product from "./interface/Product";
 // import BlankImage from "./img/blank.jpg";
 
 export default function ProductCard(props: ProductCardProps) {
@@ -18,7 +14,7 @@ export default function ProductCard(props: ProductCardProps) {
   const router = useRouter();
 
   const addToCart = (productId: number) => {
-    console.log(productId);
+    props.addedToCart();
     const sessionID = localStorage.getItem("sessionID");
     if (!sessionID) {
       // proceed as guest
@@ -26,11 +22,12 @@ export default function ProductCard(props: ProductCardProps) {
 
       if (cart) {
         localStorage.setItem("cart", [cart, productId].toString());
-        return router.push("#cart");
+        return router.push("?cartcount=" + (+cart.split(",").length + 1), {
+          scroll: false,
+        });
       }
       localStorage.setItem("cart", [productId].toString());
-      router.push("/cart");
-      return;
+      return router.push("?cartcount=" + 1);
     }
     // proceed as logged in user
   };

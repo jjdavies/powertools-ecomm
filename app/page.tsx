@@ -1,35 +1,16 @@
-// "use client";
 import Image from "next/image";
 import styles from "./output.module.css";
 
 import MainLogo from "./img/branding/main-logo.png";
 import Banner from "./Banner";
-import ProductCard from "./ProductCard";
+import Products from "./Products";
 
-// import BlankImage from "./img/blank.jpg";
-
-// import { useState } from "react";
-
-// interface Product {
-//   id: number;
-//   name: number;
-//   category: number;
-//   price: number;
-//   imageid: string;
-// }
+import Product from "./interface/Product";
 
 import { getProducts } from "./lib/data";
 
 export default async function Page() {
-  const bannerCategories = [
-    { name: "Power Tools" },
-    { name: "Hand Tools" },
-    { name: "Gardening" },
-    { name: "Plumbing" },
-    { name: "Electrical" },
-    { name: "Shopping Cart" },
-  ];
-  const products = await getProducts();
+  const products: Product[] = await getProducts();
   console.log(products);
   // const [hoverCategory, setHoverCategory] = useState<string>(""); // State to track which category is being hovered over
   // const [hamburgerClicked, setHamburgerClicked] = useState(true); // State to track if the hamburger menu is clicked
@@ -47,9 +28,9 @@ export default async function Page() {
   //   // }
   // };
 
-  const hamburgerClick = () => {
-    // setHamburgerClicked(!hamburgerClicked);
-  };
+  // const hamburgerClick = () => {
+  //   // setHamburgerClicked(!hamburgerClicked);
+  // };
 
   return (
     <div className={styles.page}>
@@ -64,7 +45,7 @@ export default async function Page() {
           alt="company logo"
         />
         {/* </div> */}
-        <Banner bannerCategories={bannerCategories} />
+        <Banner />
         <div
           className={styles.hamburgerMenuContainer}
           // onClick={() => hamburgerClick}
@@ -101,11 +82,7 @@ export default async function Page() {
             ></div>
           ))}
         </div> */}
-        <div className={styles.productsContainer}>
-          {products.map((product) => (
-            <ProductCard product={product} key={product.product_id} />
-          ))}
-        </div>
+        <Products products={products} />
       </main>
       <footer className={styles.footer}></footer>
     </div>

@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^7.3.0",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.5.0",
     "next": "15.2.3",
+    "postgrejs": "^2.22.4",
     "postgres": "^3.4.5",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "server-only": "^0.0.1",
+    "stripe": "^18.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
