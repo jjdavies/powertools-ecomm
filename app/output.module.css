@@ -279,6 +279,7 @@
 
 .orderBoxSubtotal {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px;
@@ -309,6 +310,32 @@
   text-align: center;
   border-radius: 1.5vw;
   cursor: pointer;
+}
+
+.checkoutInfoContainer {
+  background-color: #fcfcfc;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  margin: 0 0 10% 0;
+}
+
+.checkoutInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.checkoutInfoHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10%;
 }
 
 /*# sourceMappingURL=output.module.css.map */

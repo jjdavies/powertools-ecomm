@@ -298,6 +298,7 @@ $tertiary-color: #5ccce6;
 
 .orderBoxSubtotal {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px;
@@ -328,4 +329,34 @@ $tertiary-color: #5ccce6;
   text-align: center;
   border-radius: 1.5vw;
   cursor: pointer;
+}
+
+.checkoutInfoContainer {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // justify-content: center;
+  width: 80%;
+  height: 80%;
+  margin: 0 0 10% 0;
+}
+
+.checkoutInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.checkoutInfoImage {
+}
+
+.checkoutInfoHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10%;
 }
