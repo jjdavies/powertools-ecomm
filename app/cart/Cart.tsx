@@ -14,7 +14,6 @@ export default function Cart(props: CartProps) {
     const cart = localStorage.getItem("cart");
     if (cart) setCartContents(cart);
   }, []);
-  //   const cartContents = window.localStorage.getItem("cart");
   const cartProducts = cartContents
     ? cartContents.split(",").map((productID) => {
         const product = props.products.find(
@@ -94,6 +93,23 @@ export default function Cart(props: CartProps) {
             <div className={styles.orderBoxShippingDetails}>
               + Delivery to UK Mainland address: £4.99
             </div>
+            <input
+              type="hidden"
+              name="productsquantities"
+              value={cartProductsDeduplicated.map((product) => {
+                return product.product.product_id + ":" + product.quantity;
+              })}
+            />
+            <input
+              type="hidden"
+              name="subtotal"
+              value={cartProductsDeduplicated
+                .reduce((acc, product) => {
+                  return acc + +product.product.price * product.quantity;
+                }, 0)
+                .toFixed(2)}
+            />
+            <input type="hidden" name="shipping" value={4.99} />
             <button
               className={styles.orderBoxCheckoutButton}
               type="submit"
