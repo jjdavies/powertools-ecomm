@@ -32,6 +32,7 @@ $tertiary-color: #5ccce6;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 .main {
   background-color: $background-color;
@@ -125,6 +126,7 @@ $tertiary-color: #5ccce6;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 3px;
+  margin-bottom: 10px;
 }
 
 .productCard {
@@ -256,9 +258,27 @@ $tertiary-color: #5ccce6;
 }
 
 .cartProductQuantity {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   width: 90%;
   font-size: 1rem;
+  margin: 3px 0;
+}
+
+.cartProductQuantityIncrementButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(225, 225, 225);
+  color: black;
+  height: 3vw;
+  width: 30px;
+  padding: 2px;
+  margin: 0 3px;
+  text-align: center;
+  // border-radius: 1.5vw;
+  cursor: pointer;
 }
 
 .cartProductPrice {
@@ -323,8 +343,10 @@ $tertiary-color: #5ccce6;
   align-items: center;
   background-color: $secondary-color;
   color: black;
+  border: 0;
   height: 3vw;
   width: 90%;
+  margin: 4px auto;
   padding: 2px;
   text-align: center;
   border-radius: 1.5vw;

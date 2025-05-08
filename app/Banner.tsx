@@ -3,7 +3,7 @@ import styles from "./output.module.css";
 import CartBadge from "./CartBadge";
 import { useRouter } from "next/navigation";
 
-export default function Banner() {
+export default function Banner(props: { cartBadge?: boolean }) {
   const bannerCategories = [
     { name: "Power Tools" },
     { name: "Hand Tools" },
@@ -46,7 +46,9 @@ export default function Banner() {
           key={category.name}
           onClick={() => bannerClick(category)}
         >
-          {category.name === "Shopping Basket" && <CartBadge />}
+          {category.name === "Shopping Basket" && props.cartBadge && (
+            <CartBadge />
+          )}
           <div>{category.name}</div>
         </div>
       ))}

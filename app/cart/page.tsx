@@ -7,6 +7,7 @@ import Product from "../interface/Product";
 import Cart from "./Cart";
 
 import { getProducts } from "../lib/data";
+import Link from "next/link";
 
 export default async function Page() {
   const products: Product[] = await getProducts();
@@ -16,13 +17,15 @@ export default async function Page() {
       <div className={styles.salesBanner}>!!SALE!!</div>
       <div className={styles.mainBanner}>
         {/* <div className={styles.mainLogoContainer}> */}
-        <Image
-          className={styles.mainLogo}
-          src={MainLogo}
-          width={0}
-          height={0}
-          alt="company logo"
-        />
+        <Link href="/">
+          <Image
+            className={styles.mainLogo}
+            src={MainLogo}
+            width={0}
+            height={0}
+            alt="company logo"
+          />
+        </Link>
         {/* </div> */}
         <Banner />
       </div>

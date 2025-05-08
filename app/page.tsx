@@ -45,7 +45,7 @@ export default async function Page() {
           alt="company logo"
         />
         {/* </div> */}
-        <Banner />
+        <Banner cartBadge />
         <div
           className={styles.hamburgerMenuContainer}
           // onClick={() => hamburgerClick}
